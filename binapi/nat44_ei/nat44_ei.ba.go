@@ -429,6 +429,7 @@ func (m *Nat44EiAddDelStaticMapping) Unmarshal(b []byte) error {
 }
 
 // Nat44EiAddDelStaticMappingReply defines message 'nat44_ei_add_del_static_mapping_reply'.
+
 // InProgress: the message form may change in the future versions
 type Nat44EiAddDelStaticMappingReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
@@ -927,6 +928,7 @@ func (m *Nat44EiGetMssClampingReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiHaFlush defines message 'nat44_ei_ha_flush'.
+
 // InProgress: the message form may change in the future versions
 type Nat44EiHaFlush struct{}
 
@@ -2804,7 +2806,7 @@ func (m *Nat44EiUserDetails) Unmarshal(b []byte) error {
 }
 
 // Nat44EiUserDump defines message 'nat44_ei_user_dump'.
-// InProgress: the message form may change in the future versions
+<// InProgress: the message form may change in the future versions
 type Nat44EiUserDump struct{}
 
 func (m *Nat44EiUserDump) Reset()               { *m = Nat44EiUserDump{} }

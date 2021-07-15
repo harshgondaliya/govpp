@@ -635,7 +635,8 @@ func (m *PnatInterfacesDetails) Marshal(b []byte) ([]byte, error) {
 	}
 	buf := codec.NewBuffer(b)
 	buf.EncodeUint32(uint32(m.SwIfIndex))
-	for i := 0; i < 2; i++ {
+
+  for i := 0; i < 2; i++ {
 		var x bool
 		if i < len(m.Enabled) {
 			x = bool(m.Enabled[i])
@@ -650,11 +651,13 @@ func (m *PnatInterfacesDetails) Marshal(b []byte) ([]byte, error) {
 func (m *PnatInterfacesDetails) Unmarshal(b []byte) error {
 	buf := codec.NewBuffer(b)
 	m.SwIfIndex = interface_types.InterfaceIndex(buf.DecodeUint32())
-	m.Enabled = make([]bool, 2)
+
+  m.Enabled = make([]bool, 2)
 	for i := 0; i < len(m.Enabled); i++ {
 		m.Enabled[i] = buf.DecodeBool()
 	}
-	for j0 := 0; j0 < 2; j0++ {
+
+  for j0 := 0; j0 < 2; j0++ {
 		m.LookupMask[j0] = PnatMask(buf.DecodeUint32())
 	}
 	return nil
