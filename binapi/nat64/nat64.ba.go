@@ -659,6 +659,7 @@ func (m *Nat64InterfaceDump) Unmarshal(b []byte) error {
 }
 
 // Nat64PluginEnableDisable defines message 'nat64_plugin_enable_disable'.
+// InProgress: the message form may change in the future versions
 type Nat64PluginEnableDisable struct {
 	BibBuckets    uint32 `binapi:"u32,name=bib_buckets" json:"bib_buckets,omitempty"`
 	BibMemorySize uint32 `binapi:"u32,name=bib_memory_size" json:"bib_memory_size,omitempty"`
@@ -708,6 +709,7 @@ func (m *Nat64PluginEnableDisable) Unmarshal(b []byte) error {
 }
 
 // Nat64PluginEnableDisableReply defines message 'nat64_plugin_enable_disable_reply'.
+// InProgress: the message form may change in the future versions
 type Nat64PluginEnableDisableReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }

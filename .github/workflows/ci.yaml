@@ -166,7 +166,7 @@ jobs:
           sudo apt clean
           docker rmi $(docker image ls -aq)
           df -h
-      - name: Docker Build VPP 20.09
+      - name: Docker Build VPP 21.06
         run: |
           docker build .
           VPP_VERSION=$(docker run $(docker build -q . --target version))

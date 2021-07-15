@@ -608,6 +608,7 @@ func (m *ApplicationDetachReply) Unmarshal(b []byte) error {
 }
 
 // ApplicationTLSCertAdd defines message 'application_tls_cert_add'.
+// Deprecated: to be removed post 21.06
 type ApplicationTLSCertAdd struct {
 	AppIndex uint32 `binapi:"u32,name=app_index" json:"app_index,omitempty"`
 	CertLen  uint16 `binapi:"u16,name=cert_len" json:"-"`
@@ -650,6 +651,7 @@ func (m *ApplicationTLSCertAdd) Unmarshal(b []byte) error {
 }
 
 // ApplicationTLSCertAddReply defines message 'application_tls_cert_add_reply'.
+// Deprecated: to be removed post 21.06
 type ApplicationTLSCertAddReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -683,6 +685,7 @@ func (m *ApplicationTLSCertAddReply) Unmarshal(b []byte) error {
 }
 
 // ApplicationTLSKeyAdd defines message 'application_tls_key_add'.
+// Deprecated: to be removed post 21.06
 type ApplicationTLSKeyAdd struct {
 	AppIndex uint32 `binapi:"u32,name=app_index" json:"app_index,omitempty"`
 	KeyLen   uint16 `binapi:"u16,name=key_len" json:"-"`
@@ -725,6 +728,7 @@ func (m *ApplicationTLSKeyAdd) Unmarshal(b []byte) error {
 }
 
 // ApplicationTLSKeyAddReply defines message 'application_tls_key_add_reply'.
+// Deprecated: to be removed post 21.06
 type ApplicationTLSKeyAddReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }

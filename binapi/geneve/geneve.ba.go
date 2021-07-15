@@ -32,6 +32,7 @@ const (
 )
 
 // GeneveAddDelTunnel defines message 'geneve_add_del_tunnel'.
+// Deprecated: the message will be removed in the future versions
 type GeneveAddDelTunnel struct {
 	IsAdd          bool                           `binapi:"bool,name=is_add" json:"is_add,omitempty"`
 	LocalAddress   ip_types.Address               `binapi:"address,name=local_address" json:"local_address,omitempty"`

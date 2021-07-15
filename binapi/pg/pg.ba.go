@@ -256,6 +256,7 @@ func (m *PgEnableDisableReply) Unmarshal(b []byte) error {
 }
 
 // PgInterfaceEnableDisableCoalesce defines message 'pg_interface_enable_disable_coalesce'.
+// InProgress: the message form may change in the future versions
 type PgInterfaceEnableDisableCoalesce struct {
 	SwIfIndex       interface_types.InterfaceIndex `binapi:"interface_index,name=sw_if_index" json:"sw_if_index,omitempty"`
 	CoalesceEnabled bool                           `binapi:"bool,name=coalesce_enabled" json:"coalesce_enabled,omitempty"`
@@ -295,6 +296,7 @@ func (m *PgInterfaceEnableDisableCoalesce) Unmarshal(b []byte) error {
 }
 
 // PgInterfaceEnableDisableCoalesceReply defines message 'pg_interface_enable_disable_coalesce_reply'.
+// InProgress: the message form may change in the future versions
 type PgInterfaceEnableDisableCoalesceReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }

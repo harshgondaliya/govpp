@@ -436,6 +436,7 @@ type GbpVxlanTunnel struct {
 }
 
 // GbpBridgeDomainAdd defines message 'gbp_bridge_domain_add'.
+// InProgress: the message form may change in the future versions
 type GbpBridgeDomainAdd struct {
 	Bd GbpBridgeDomain `binapi:"gbp_bridge_domain,name=bd" json:"bd,omitempty"`
 }
@@ -484,6 +485,7 @@ func (m *GbpBridgeDomainAdd) Unmarshal(b []byte) error {
 }
 
 // GbpBridgeDomainAddReply defines message 'gbp_bridge_domain_add_reply'.
+// InProgress: the message form may change in the future versions
 type GbpBridgeDomainAddReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -517,6 +519,7 @@ func (m *GbpBridgeDomainAddReply) Unmarshal(b []byte) error {
 }
 
 // GbpBridgeDomainDel defines message 'gbp_bridge_domain_del'.
+// InProgress: the message form may change in the future versions
 type GbpBridgeDomainDel struct {
 	BdID uint32 `binapi:"u32,name=bd_id" json:"bd_id,omitempty"`
 }
@@ -550,6 +553,7 @@ func (m *GbpBridgeDomainDel) Unmarshal(b []byte) error {
 }
 
 // GbpBridgeDomainDelReply defines message 'gbp_bridge_domain_del_reply'.
+// InProgress: the message form may change in the future versions
 type GbpBridgeDomainDelReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -583,6 +587,7 @@ func (m *GbpBridgeDomainDelReply) Unmarshal(b []byte) error {
 }
 
 // GbpBridgeDomainDetails defines message 'gbp_bridge_domain_details'.
+// InProgress: the message form may change in the future versions
 type GbpBridgeDomainDetails struct {
 	Bd GbpBridgeDomain `binapi:"gbp_bridge_domain,name=bd" json:"bd,omitempty"`
 }
@@ -631,6 +636,7 @@ func (m *GbpBridgeDomainDetails) Unmarshal(b []byte) error {
 }
 
 // GbpBridgeDomainDump defines message 'gbp_bridge_domain_dump'.
+// InProgress: the message form may change in the future versions
 type GbpBridgeDomainDump struct{}
 
 func (m *GbpBridgeDomainDump) Reset()               { *m = GbpBridgeDomainDump{} }
@@ -658,6 +664,7 @@ func (m *GbpBridgeDomainDump) Unmarshal(b []byte) error {
 }
 
 // GbpBridgeDomainDumpReply defines message 'gbp_bridge_domain_dump_reply'.
+// InProgress: the message form may change in the future versions
 type GbpBridgeDomainDumpReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -691,6 +698,7 @@ func (m *GbpBridgeDomainDumpReply) Unmarshal(b []byte) error {
 }
 
 // GbpContractAddDel defines message 'gbp_contract_add_del'.
+// InProgress: the message form may change in the future versions
 type GbpContractAddDel struct {
 	IsAdd    bool        `binapi:"bool,name=is_add" json:"is_add,omitempty"`
 	Contract GbpContract `binapi:"gbp_contract,name=contract" json:"contract,omitempty"`
@@ -801,6 +809,7 @@ func (m *GbpContractAddDel) Unmarshal(b []byte) error {
 }
 
 // GbpContractAddDelReply defines message 'gbp_contract_add_del_reply'.
+// InProgress: the message form may change in the future versions
 type GbpContractAddDelReply struct {
 	Retval     int32  `binapi:"i32,name=retval" json:"retval,omitempty"`
 	StatsIndex uint32 `binapi:"u32,name=stats_index" json:"stats_index,omitempty"`
@@ -838,6 +847,7 @@ func (m *GbpContractAddDelReply) Unmarshal(b []byte) error {
 }
 
 // GbpContractDetails defines message 'gbp_contract_details'.
+// InProgress: the message form may change in the future versions
 type GbpContractDetails struct {
 	Contract GbpContract `binapi:"gbp_contract,name=contract" json:"contract,omitempty"`
 }
@@ -944,6 +954,7 @@ func (m *GbpContractDetails) Unmarshal(b []byte) error {
 }
 
 // GbpContractDump defines message 'gbp_contract_dump'.
+// InProgress: the message form may change in the future versions
 type GbpContractDump struct{}
 
 func (m *GbpContractDump) Reset()               { *m = GbpContractDump{} }
@@ -971,6 +982,7 @@ func (m *GbpContractDump) Unmarshal(b []byte) error {
 }
 
 // GbpEndpointAdd defines message 'gbp_endpoint_add'.
+// InProgress: the message form may change in the future versions
 type GbpEndpointAdd struct {
 	Endpoint GbpEndpoint `binapi:"gbp_endpoint,name=endpoint" json:"endpoint,omitempty"`
 }
@@ -1050,6 +1062,7 @@ func (m *GbpEndpointAdd) Unmarshal(b []byte) error {
 }
 
 // GbpEndpointAddReply defines message 'gbp_endpoint_add_reply'.
+// InProgress: the message form may change in the future versions
 type GbpEndpointAddReply struct {
 	Retval int32  `binapi:"i32,name=retval" json:"retval,omitempty"`
 	Handle uint32 `binapi:"u32,name=handle" json:"handle,omitempty"`
@@ -1087,6 +1100,7 @@ func (m *GbpEndpointAddReply) Unmarshal(b []byte) error {
 }
 
 // GbpEndpointDel defines message 'gbp_endpoint_del'.
+// InProgress: the message form may change in the future versions
 type GbpEndpointDel struct {
 	Handle uint32 `binapi:"u32,name=handle" json:"handle,omitempty"`
 }
@@ -1120,6 +1134,7 @@ func (m *GbpEndpointDel) Unmarshal(b []byte) error {
 }
 
 // GbpEndpointDelReply defines message 'gbp_endpoint_del_reply'.
+// InProgress: the message form may change in the future versions
 type GbpEndpointDelReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -1153,6 +1168,7 @@ func (m *GbpEndpointDelReply) Unmarshal(b []byte) error {
 }
 
 // GbpEndpointDetails defines message 'gbp_endpoint_details'.
+// InProgress: the message form may change in the future versions
 type GbpEndpointDetails struct {
 	Age      float64     `binapi:"f64,name=age" json:"age,omitempty"`
 	Handle   uint32      `binapi:"u32,name=handle" json:"handle,omitempty"`
@@ -1240,6 +1256,7 @@ func (m *GbpEndpointDetails) Unmarshal(b []byte) error {
 }
 
 // GbpEndpointDump defines message 'gbp_endpoint_dump'.
+// InProgress: the message form may change in the future versions
 type GbpEndpointDump struct{}
 
 func (m *GbpEndpointDump) Reset()               { *m = GbpEndpointDump{} }
@@ -1267,6 +1284,7 @@ func (m *GbpEndpointDump) Unmarshal(b []byte) error {
 }
 
 // GbpEndpointGroupAdd defines message 'gbp_endpoint_group_add'.
+// InProgress: the message form may change in the future versions
 type GbpEndpointGroupAdd struct {
 	Epg GbpEndpointGroup `binapi:"gbp_endpoint_group,name=epg" json:"epg,omitempty"`
 }
@@ -1315,6 +1333,7 @@ func (m *GbpEndpointGroupAdd) Unmarshal(b []byte) error {
 }
 
 // GbpEndpointGroupAddReply defines message 'gbp_endpoint_group_add_reply'.
+// InProgress: the message form may change in the future versions
 type GbpEndpointGroupAddReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -1348,6 +1367,7 @@ func (m *GbpEndpointGroupAddReply) Unmarshal(b []byte) error {
 }
 
 // GbpEndpointGroupDel defines message 'gbp_endpoint_group_del'.
+// InProgress: the message form may change in the future versions
 type GbpEndpointGroupDel struct {
 	Sclass uint16 `binapi:"u16,name=sclass" json:"sclass,omitempty"`
 }
@@ -1381,6 +1401,7 @@ func (m *GbpEndpointGroupDel) Unmarshal(b []byte) error {
 }
 
 // GbpEndpointGroupDelReply defines message 'gbp_endpoint_group_del_reply'.
+// InProgress: the message form may change in the future versions
 type GbpEndpointGroupDelReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -1414,6 +1435,7 @@ func (m *GbpEndpointGroupDelReply) Unmarshal(b []byte) error {
 }
 
 // GbpEndpointGroupDetails defines message 'gbp_endpoint_group_details'.
+// InProgress: the message form may change in the future versions
 type GbpEndpointGroupDetails struct {
 	Epg GbpEndpointGroup `binapi:"gbp_endpoint_group,name=epg" json:"epg,omitempty"`
 }
@@ -1462,6 +1484,7 @@ func (m *GbpEndpointGroupDetails) Unmarshal(b []byte) error {
 }
 
 // GbpEndpointGroupDump defines message 'gbp_endpoint_group_dump'.
+// InProgress: the message form may change in the future versions
 type GbpEndpointGroupDump struct{}
 
 func (m *GbpEndpointGroupDump) Reset()               { *m = GbpEndpointGroupDump{} }
@@ -1489,6 +1512,7 @@ func (m *GbpEndpointGroupDump) Unmarshal(b []byte) error {
 }
 
 // GbpExtItfAddDel defines message 'gbp_ext_itf_add_del'.
+// InProgress: the message form may change in the future versions
 type GbpExtItfAddDel struct {
 	IsAdd  bool      `binapi:"bool,name=is_add" json:"is_add,omitempty"`
 	ExtItf GbpExtItf `binapi:"gbp_ext_itf,name=ext_itf" json:"ext_itf,omitempty"`
@@ -1535,6 +1559,7 @@ func (m *GbpExtItfAddDel) Unmarshal(b []byte) error {
 }
 
 // GbpExtItfAddDelReply defines message 'gbp_ext_itf_add_del_reply'.
+// InProgress: the message form may change in the future versions
 type GbpExtItfAddDelReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -1568,6 +1593,7 @@ func (m *GbpExtItfAddDelReply) Unmarshal(b []byte) error {
 }
 
 // GbpExtItfDetails defines message 'gbp_ext_itf_details'.
+// InProgress: the message form may change in the future versions
 type GbpExtItfDetails struct {
 	ExtItf GbpExtItf `binapi:"gbp_ext_itf,name=ext_itf" json:"ext_itf,omitempty"`
 }
@@ -1610,6 +1636,7 @@ func (m *GbpExtItfDetails) Unmarshal(b []byte) error {
 }
 
 // GbpExtItfDump defines message 'gbp_ext_itf_dump'.
+// InProgress: the message form may change in the future versions
 type GbpExtItfDump struct{}
 
 func (m *GbpExtItfDump) Reset()               { *m = GbpExtItfDump{} }
@@ -1637,6 +1664,7 @@ func (m *GbpExtItfDump) Unmarshal(b []byte) error {
 }
 
 // GbpRecircAddDel defines message 'gbp_recirc_add_del'.
+// InProgress: the message form may change in the future versions
 type GbpRecircAddDel struct {
 	IsAdd  bool      `binapi:"bool,name=is_add" json:"is_add,omitempty"`
 	Recirc GbpRecirc `binapi:"gbp_recirc,name=recirc" json:"recirc,omitempty"`
@@ -1680,6 +1708,7 @@ func (m *GbpRecircAddDel) Unmarshal(b []byte) error {
 }
 
 // GbpRecircAddDelReply defines message 'gbp_recirc_add_del_reply'.
+// InProgress: the message form may change in the future versions
 type GbpRecircAddDelReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -1713,6 +1742,7 @@ func (m *GbpRecircAddDelReply) Unmarshal(b []byte) error {
 }
 
 // GbpRecircDetails defines message 'gbp_recirc_details'.
+// InProgress: the message form may change in the future versions
 type GbpRecircDetails struct {
 	Recirc GbpRecirc `binapi:"gbp_recirc,name=recirc" json:"recirc,omitempty"`
 }
@@ -1752,6 +1782,7 @@ func (m *GbpRecircDetails) Unmarshal(b []byte) error {
 }
 
 // GbpRecircDump defines message 'gbp_recirc_dump'.
+// InProgress: the message form may change in the future versions
 type GbpRecircDump struct{}
 
 func (m *GbpRecircDump) Reset()               { *m = GbpRecircDump{} }
@@ -1779,6 +1810,7 @@ func (m *GbpRecircDump) Unmarshal(b []byte) error {
 }
 
 // GbpRouteDomainAdd defines message 'gbp_route_domain_add'.
+// InProgress: the message form may change in the future versions
 type GbpRouteDomainAdd struct {
 	Rd GbpRouteDomain `binapi:"gbp_route_domain,name=rd" json:"rd,omitempty"`
 }
@@ -1827,6 +1859,7 @@ func (m *GbpRouteDomainAdd) Unmarshal(b []byte) error {
 }
 
 // GbpRouteDomainAddReply defines message 'gbp_route_domain_add_reply'.
+// InProgress: the message form may change in the future versions
 type GbpRouteDomainAddReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -1860,6 +1893,7 @@ func (m *GbpRouteDomainAddReply) Unmarshal(b []byte) error {
 }
 
 // GbpRouteDomainDel defines message 'gbp_route_domain_del'.
+// InProgress: the message form may change in the future versions
 type GbpRouteDomainDel struct {
 	RdID uint32 `binapi:"u32,name=rd_id" json:"rd_id,omitempty"`
 }
@@ -1893,6 +1927,7 @@ func (m *GbpRouteDomainDel) Unmarshal(b []byte) error {
 }
 
 // GbpRouteDomainDelReply defines message 'gbp_route_domain_del_reply'.
+// InProgress: the message form may change in the future versions
 type GbpRouteDomainDelReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -1926,6 +1961,7 @@ func (m *GbpRouteDomainDelReply) Unmarshal(b []byte) error {
 }
 
 // GbpRouteDomainDetails defines message 'gbp_route_domain_details'.
+// InProgress: the message form may change in the future versions
 type GbpRouteDomainDetails struct {
 	Rd GbpRouteDomain `binapi:"gbp_route_domain,name=rd" json:"rd,omitempty"`
 }
@@ -1974,6 +2010,7 @@ func (m *GbpRouteDomainDetails) Unmarshal(b []byte) error {
 }
 
 // GbpRouteDomainDump defines message 'gbp_route_domain_dump'.
+// InProgress: the message form may change in the future versions
 type GbpRouteDomainDump struct{}
 
 func (m *GbpRouteDomainDump) Reset()               { *m = GbpRouteDomainDump{} }
@@ -2001,6 +2038,7 @@ func (m *GbpRouteDomainDump) Unmarshal(b []byte) error {
 }
 
 // GbpRouteDomainDumpReply defines message 'gbp_route_domain_dump_reply'.
+// InProgress: the message form may change in the future versions
 type GbpRouteDomainDumpReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -2034,6 +2072,7 @@ func (m *GbpRouteDomainDumpReply) Unmarshal(b []byte) error {
 }
 
 // GbpSubnetAddDel defines message 'gbp_subnet_add_del'.
+// InProgress: the message form may change in the future versions
 type GbpSubnetAddDel struct {
 	IsAdd  bool      `binapi:"bool,name=is_add" json:"is_add,omitempty"`
 	Subnet GbpSubnet `binapi:"gbp_subnet,name=subnet" json:"subnet,omitempty"`
@@ -2089,6 +2128,7 @@ func (m *GbpSubnetAddDel) Unmarshal(b []byte) error {
 }
 
 // GbpSubnetAddDelReply defines message 'gbp_subnet_add_del_reply'.
+// InProgress: the message form may change in the future versions
 type GbpSubnetAddDelReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -2122,6 +2162,7 @@ func (m *GbpSubnetAddDelReply) Unmarshal(b []byte) error {
 }
 
 // GbpSubnetDetails defines message 'gbp_subnet_details'.
+// InProgress: the message form may change in the future versions
 type GbpSubnetDetails struct {
 	Subnet GbpSubnet `binapi:"gbp_subnet,name=subnet" json:"subnet,omitempty"`
 }
@@ -2173,6 +2214,7 @@ func (m *GbpSubnetDetails) Unmarshal(b []byte) error {
 }
 
 // GbpSubnetDump defines message 'gbp_subnet_dump'.
+// InProgress: the message form may change in the future versions
 type GbpSubnetDump struct{}
 
 func (m *GbpSubnetDump) Reset()               { *m = GbpSubnetDump{} }
@@ -2200,6 +2242,7 @@ func (m *GbpSubnetDump) Unmarshal(b []byte) error {
 }
 
 // GbpVxlanTunnelAdd defines message 'gbp_vxlan_tunnel_add'.
+// InProgress: the message form may change in the future versions
 type GbpVxlanTunnelAdd struct {
 	Tunnel GbpVxlanTunnel `binapi:"gbp_vxlan_tunnel,name=tunnel" json:"tunnel,omitempty"`
 }
@@ -2242,6 +2285,7 @@ func (m *GbpVxlanTunnelAdd) Unmarshal(b []byte) error {
 }
 
 // GbpVxlanTunnelAddReply defines message 'gbp_vxlan_tunnel_add_reply'.
+// InProgress: the message form may change in the future versions
 type GbpVxlanTunnelAddReply struct {
 	Retval    int32                          `binapi:"i32,name=retval" json:"retval,omitempty"`
 	SwIfIndex interface_types.InterfaceIndex `binapi:"interface_index,name=sw_if_index" json:"sw_if_index,omitempty"`
@@ -2279,6 +2323,7 @@ func (m *GbpVxlanTunnelAddReply) Unmarshal(b []byte) error {
 }
 
 // GbpVxlanTunnelDel defines message 'gbp_vxlan_tunnel_del'.
+// InProgress: the message form may change in the future versions
 type GbpVxlanTunnelDel struct {
 	Vni uint32 `binapi:"u32,name=vni" json:"vni,omitempty"`
 }
@@ -2312,6 +2357,7 @@ func (m *GbpVxlanTunnelDel) Unmarshal(b []byte) error {
 }
 
 // GbpVxlanTunnelDelReply defines message 'gbp_vxlan_tunnel_del_reply'.
+// InProgress: the message form may change in the future versions
 type GbpVxlanTunnelDelReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -2345,6 +2391,7 @@ func (m *GbpVxlanTunnelDelReply) Unmarshal(b []byte) error {
 }
 
 // GbpVxlanTunnelDetails defines message 'gbp_vxlan_tunnel_details'.
+// InProgress: the message form may change in the future versions
 type GbpVxlanTunnelDetails struct {
 	Tunnel GbpVxlanTunnel `binapi:"gbp_vxlan_tunnel,name=tunnel" json:"tunnel,omitempty"`
 }
@@ -2387,6 +2434,7 @@ func (m *GbpVxlanTunnelDetails) Unmarshal(b []byte) error {
 }
 
 // GbpVxlanTunnelDump defines message 'gbp_vxlan_tunnel_dump'.
+// InProgress: the message form may change in the future versions
 type GbpVxlanTunnelDump struct{}
 
 func (m *GbpVxlanTunnelDump) Reset()               { *m = GbpVxlanTunnelDump{} }
