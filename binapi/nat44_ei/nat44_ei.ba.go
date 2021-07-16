@@ -2806,7 +2806,7 @@ func (m *Nat44EiUserDetails) Unmarshal(b []byte) error {
 }
 
 // Nat44EiUserDump defines message 'nat44_ei_user_dump'.
-<// InProgress: the message form may change in the future versions
+// InProgress: the message form may change in the future versions
 type Nat44EiUserDump struct{}
 
 func (m *Nat44EiUserDump) Reset()               { *m = Nat44EiUserDump{} }
