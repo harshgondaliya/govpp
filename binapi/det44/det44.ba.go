@@ -375,6 +375,7 @@ func (m *Det44GetTimeouts) Unmarshal(b []byte) error {
 }
 
 // Det44GetTimeoutsReply defines message 'det44_get_timeouts_reply'.
+// InProgress: the message form may change in the future versions
 type Det44GetTimeoutsReply struct {
 	Retval         int32  `binapi:"i32,name=retval" json:"retval,omitempty"`
 	UDP            uint32 `binapi:"u32,name=udp" json:"udp,omitempty"`
@@ -424,6 +425,7 @@ func (m *Det44GetTimeoutsReply) Unmarshal(b []byte) error {
 }
 
 // Det44InterfaceAddDelFeature defines message 'det44_interface_add_del_feature'.
+// InProgress: the message form may change in the future versions
 type Det44InterfaceAddDelFeature struct {
 	IsAdd     bool                           `binapi:"bool,name=is_add" json:"is_add,omitempty"`
 	IsInside  bool                           `binapi:"bool,name=is_inside" json:"is_inside,omitempty"`
@@ -465,6 +467,7 @@ func (m *Det44InterfaceAddDelFeature) Unmarshal(b []byte) error {
 }
 
 // Det44InterfaceAddDelFeatureReply defines message 'det44_interface_add_del_feature_reply'.
+// InProgress: the message form may change in the future versions
 type Det44InterfaceAddDelFeatureReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -500,6 +503,7 @@ func (m *Det44InterfaceAddDelFeatureReply) Unmarshal(b []byte) error {
 }
 
 // Det44InterfaceDetails defines message 'det44_interface_details'.
+// InProgress: the message form may change in the future versions
 type Det44InterfaceDetails struct {
 	IsInside  bool                           `binapi:"bool,name=is_inside" json:"is_inside,omitempty"`
 	IsOutside bool                           `binapi:"bool,name=is_outside" json:"is_outside,omitempty"`
@@ -541,6 +545,7 @@ func (m *Det44InterfaceDetails) Unmarshal(b []byte) error {
 }
 
 // Det44InterfaceDump defines message 'det44_interface_dump'.
+// InProgress: the message form may change in the future versions
 type Det44InterfaceDump struct{}
 
 func (m *Det44InterfaceDump) Reset()               { *m = Det44InterfaceDump{} }
@@ -652,6 +657,7 @@ func (m *Det44MapDump) Unmarshal(b []byte) error {
 }
 
 // Det44PluginEnableDisable defines message 'det44_plugin_enable_disable'.
+// InProgress: the message form may change in the future versions
 type Det44PluginEnableDisable struct {
 	InsideVrf  uint32 `binapi:"u32,name=inside_vrf" json:"inside_vrf,omitempty"`
 	OutsideVrf uint32 `binapi:"u32,name=outside_vrf" json:"outside_vrf,omitempty"`
@@ -693,6 +699,7 @@ func (m *Det44PluginEnableDisable) Unmarshal(b []byte) error {
 }
 
 // Det44PluginEnableDisableReply defines message 'det44_plugin_enable_disable_reply'.
+// InProgress: the message form may change in the future versions
 type Det44PluginEnableDisableReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -888,6 +895,7 @@ func (m *Det44SessionDump) Unmarshal(b []byte) error {
 }
 
 // Det44SetTimeouts defines message 'det44_set_timeouts'.
+// InProgress: the message form may change in the future versions
 type Det44SetTimeouts struct {
 	UDP            uint32 `binapi:"u32,name=udp" json:"udp,omitempty"`
 	TCPEstablished uint32 `binapi:"u32,name=tcp_established" json:"tcp_established,omitempty"`
@@ -933,6 +941,7 @@ func (m *Det44SetTimeouts) Unmarshal(b []byte) error {
 }
 
 // Det44SetTimeoutsReply defines message 'det44_set_timeouts_reply'.
+// InProgress: the message form may change in the future versions
 type Det44SetTimeoutsReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -966,6 +975,7 @@ func (m *Det44SetTimeoutsReply) Unmarshal(b []byte) error {
 }
 
 // NatDetAddDelMap defines message 'nat_det_add_del_map'.
+// Deprecated: the message will be removed in the future versions
 type NatDetAddDelMap struct {
 	IsAdd   bool                `binapi:"bool,name=is_add" json:"is_add,omitempty"`
 	InAddr  ip_types.IP4Address `binapi:"ip4_address,name=in_addr" json:"in_addr,omitempty"`
@@ -1015,6 +1025,7 @@ func (m *NatDetAddDelMap) Unmarshal(b []byte) error {
 }
 
 // NatDetAddDelMapReply defines message 'nat_det_add_del_map_reply'.
+// Deprecated: the message will be removed in the future versions
 type NatDetAddDelMapReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -1048,6 +1059,7 @@ func (m *NatDetAddDelMapReply) Unmarshal(b []byte) error {
 }
 
 // NatDetCloseSessionIn defines message 'nat_det_close_session_in'.
+// Deprecated: the message will be removed in the future versions
 type NatDetCloseSessionIn struct {
 	InAddr  ip_types.IP4Address `binapi:"ip4_address,name=in_addr" json:"in_addr,omitempty"`
 	InPort  uint16              `binapi:"u16,name=in_port" json:"in_port,omitempty"`
@@ -1093,6 +1105,7 @@ func (m *NatDetCloseSessionIn) Unmarshal(b []byte) error {
 }
 
 // NatDetCloseSessionInReply defines message 'nat_det_close_session_in_reply'.
+// Deprecated: the message will be removed in the future versions
 type NatDetCloseSessionInReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -1126,6 +1139,7 @@ func (m *NatDetCloseSessionInReply) Unmarshal(b []byte) error {
 }
 
 // NatDetCloseSessionOut defines message 'nat_det_close_session_out'.
+// Deprecated: the message will be removed in the future versions
 type NatDetCloseSessionOut struct {
 	OutAddr ip_types.IP4Address `binapi:"ip4_address,name=out_addr" json:"out_addr,omitempty"`
 	OutPort uint16              `binapi:"u16,name=out_port" json:"out_port,omitempty"`
@@ -1171,6 +1185,7 @@ func (m *NatDetCloseSessionOut) Unmarshal(b []byte) error {
 }
 
 // NatDetCloseSessionOutReply defines message 'nat_det_close_session_out_reply'.
+// Deprecated: the message will be removed in the future versions
 type NatDetCloseSessionOutReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -1204,6 +1219,7 @@ func (m *NatDetCloseSessionOutReply) Unmarshal(b []byte) error {
 }
 
 // NatDetForward defines message 'nat_det_forward'.
+// Deprecated: the message will be removed in the future versions
 type NatDetForward struct {
 	InAddr ip_types.IP4Address `binapi:"ip4_address,name=in_addr" json:"in_addr,omitempty"`
 }
@@ -1237,6 +1253,7 @@ func (m *NatDetForward) Unmarshal(b []byte) error {
 }
 
 // NatDetForwardReply defines message 'nat_det_forward_reply'.
+// Deprecated: the message will be removed in the future versions
 type NatDetForwardReply struct {
 	Retval    int32               `binapi:"i32,name=retval" json:"retval,omitempty"`
 	OutPortLo uint16              `binapi:"u16,name=out_port_lo" json:"out_port_lo,omitempty"`
@@ -1282,6 +1299,7 @@ func (m *NatDetForwardReply) Unmarshal(b []byte) error {
 }
 
 // NatDetMapDetails defines message 'nat_det_map_details'.
+// Deprecated: the message will be removed in the future versions
 type NatDetMapDetails struct {
 	InAddr       ip_types.IP4Address `binapi:"ip4_address,name=in_addr" json:"in_addr,omitempty"`
 	InPlen       uint8               `binapi:"u8,name=in_plen" json:"in_plen,omitempty"`
@@ -1339,6 +1357,7 @@ func (m *NatDetMapDetails) Unmarshal(b []byte) error {
 }
 
 // NatDetMapDump defines message 'nat_det_map_dump'.
+// Deprecated: the message will be removed in the future versions
 type NatDetMapDump struct{}
 
 func (m *NatDetMapDump) Reset()               { *m = NatDetMapDump{} }
@@ -1366,6 +1385,7 @@ func (m *NatDetMapDump) Unmarshal(b []byte) error {
 }
 
 // NatDetReverse defines message 'nat_det_reverse'.
+// Deprecated: the message will be removed in the future versions
 type NatDetReverse struct {
 	OutPort uint16              `binapi:"u16,name=out_port" json:"out_port,omitempty"`
 	OutAddr ip_types.IP4Address `binapi:"ip4_address,name=out_addr" json:"out_addr,omitempty"`
@@ -1403,6 +1423,7 @@ func (m *NatDetReverse) Unmarshal(b []byte) error {
 }
 
 // NatDetReverseReply defines message 'nat_det_reverse_reply'.
+// Deprecated: the message will be removed in the future versions
 type NatDetReverseReply struct {
 	Retval int32               `binapi:"i32,name=retval" json:"retval,omitempty"`
 	InAddr ip_types.IP4Address `binapi:"ip4_address,name=in_addr" json:"in_addr,omitempty"`
@@ -1440,6 +1461,7 @@ func (m *NatDetReverseReply) Unmarshal(b []byte) error {
 }
 
 // NatDetSessionDetails defines message 'nat_det_session_details'.
+// Deprecated: the message will be removed in the future versions
 type NatDetSessionDetails struct {
 	InPort  uint16              `binapi:"u16,name=in_port" json:"in_port,omitempty"`
 	ExtAddr ip_types.IP4Address `binapi:"ip4_address,name=ext_addr" json:"ext_addr,omitempty"`
@@ -1493,6 +1515,7 @@ func (m *NatDetSessionDetails) Unmarshal(b []byte) error {
 }
 
 // NatDetSessionDump defines message 'nat_det_session_dump'.
+// Deprecated: the message will be removed in the future versions
 type NatDetSessionDump struct {
 	UserAddr ip_types.IP4Address `binapi:"ip4_address,name=user_addr" json:"user_addr,omitempty"`
 }

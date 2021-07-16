@@ -2441,6 +2441,7 @@ func (m *WantL2ArpTermEventsReply) Unmarshal(b []byte) error {
 }
 
 // WantL2MacsEvents defines message 'want_l2_macs_events'.
+// Deprecated: the message will be removed in the future versions
 type WantL2MacsEvents struct {
 	LearnLimit     uint32 `binapi:"u32,name=learn_limit,default=1000" json:"learn_limit,omitempty"`
 	ScanDelay      uint8  `binapi:"u8,name=scan_delay,default=10" json:"scan_delay,omitempty"`
@@ -2564,6 +2565,7 @@ func (m *WantL2MacsEvents2Reply) Unmarshal(b []byte) error {
 }
 
 // WantL2MacsEventsReply defines message 'want_l2_macs_events_reply'.
+// Deprecated: the message will be removed in the future versions
 type WantL2MacsEventsReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }

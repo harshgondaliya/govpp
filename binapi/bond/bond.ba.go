@@ -187,6 +187,7 @@ func (m *BondAddMemberReply) Unmarshal(b []byte) error {
 }
 
 // BondCreate defines message 'bond_create'.
+// Deprecated: the message will be removed in the future versions
 type BondCreate struct {
 	ID           uint32                    `binapi:"u32,name=id,default=4294967295" json:"id,omitempty"`
 	UseCustomMac bool                      `binapi:"bool,name=use_custom_mac" json:"use_custom_mac,omitempty"`
@@ -503,6 +504,7 @@ func (m *BondDetachMemberReply) Unmarshal(b []byte) error {
 }
 
 // BondDetachSlave defines message 'bond_detach_slave'.
+// Deprecated: the message will be removed in the future versions
 type BondDetachSlave struct {
 	SwIfIndex interface_types.InterfaceIndex `binapi:"interface_index,name=sw_if_index" json:"sw_if_index,omitempty"`
 }
@@ -536,6 +538,7 @@ func (m *BondDetachSlave) Unmarshal(b []byte) error {
 }
 
 // BondDetachSlaveReply defines message 'bond_detach_slave_reply'.
+// Deprecated: the message will be removed in the future versions
 type BondDetachSlaveReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -569,6 +572,7 @@ func (m *BondDetachSlaveReply) Unmarshal(b []byte) error {
 }
 
 // BondEnslave defines message 'bond_enslave'.
+// Deprecated: the message will be removed in the future versions
 type BondEnslave struct {
 	SwIfIndex     interface_types.InterfaceIndex `binapi:"interface_index,name=sw_if_index" json:"sw_if_index,omitempty"`
 	BondSwIfIndex interface_types.InterfaceIndex `binapi:"interface_index,name=bond_sw_if_index" json:"bond_sw_if_index,omitempty"`
@@ -802,6 +806,7 @@ func (m *SwInterfaceBondDetails) Unmarshal(b []byte) error {
 }
 
 // SwInterfaceBondDump defines message 'sw_interface_bond_dump'.
+// Deprecated: the message will be removed in the future versions
 type SwInterfaceBondDump struct{}
 
 func (m *SwInterfaceBondDump) Reset()               { *m = SwInterfaceBondDump{} }
@@ -954,6 +959,7 @@ func (m *SwInterfaceSlaveDetails) Unmarshal(b []byte) error {
 }
 
 // SwInterfaceSlaveDump defines message 'sw_interface_slave_dump'.
+// Deprecated: the message will be removed in the future versions
 type SwInterfaceSlaveDump struct {
 	SwIfIndex interface_types.InterfaceIndex `binapi:"interface_index,name=sw_if_index" json:"sw_if_index,omitempty"`
 }

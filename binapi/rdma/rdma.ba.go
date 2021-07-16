@@ -129,6 +129,7 @@ func (x RdmaRss6) String() string {
 }
 
 // RdmaCreate defines message 'rdma_create'.
+// Deprecated: 21.01
 type RdmaCreate struct {
 	HostIf  string   `binapi:"string[64],name=host_if" json:"host_if,omitempty"`
 	Name    string   `binapi:"string[64],name=name" json:"name,omitempty"`
@@ -219,6 +220,7 @@ func (m *RdmaCreateReply) Unmarshal(b []byte) error {
 }
 
 // RdmaCreateV2 defines message 'rdma_create_v2'.
+// Deprecated: the message will be removed in the future versions
 type RdmaCreateV2 struct {
 	HostIf     string   `binapi:"string[64],name=host_if" json:"host_if,omitempty"`
 	Name       string   `binapi:"string[64],name=name" json:"name,omitempty"`

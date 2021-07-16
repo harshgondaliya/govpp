@@ -99,6 +99,7 @@ func (x Nat44EiConfigFlags) String() string {
 }
 
 // Nat44EiAddDelAddressRange defines message 'nat44_ei_add_del_address_range'.
+// InProgress: the message form may change in the future versions
 type Nat44EiAddDelAddressRange struct {
 	FirstIPAddress ip_types.IP4Address `binapi:"ip4_address,name=first_ip_address" json:"first_ip_address,omitempty"`
 	LastIPAddress  ip_types.IP4Address `binapi:"ip4_address,name=last_ip_address" json:"last_ip_address,omitempty"`
@@ -144,6 +145,7 @@ func (m *Nat44EiAddDelAddressRange) Unmarshal(b []byte) error {
 }
 
 // Nat44EiAddDelAddressRangeReply defines message 'nat44_ei_add_del_address_range_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiAddDelAddressRangeReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -179,6 +181,7 @@ func (m *Nat44EiAddDelAddressRangeReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiAddDelIdentityMapping defines message 'nat44_ei_add_del_identity_mapping'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiAddDelIdentityMapping struct {
 	IsAdd     bool                           `binapi:"bool,name=is_add" json:"is_add,omitempty"`
 	Flags     Nat44EiConfigFlags             `binapi:"nat44_ei_config_flags,name=flags" json:"flags,omitempty"`
@@ -242,6 +245,7 @@ func (m *Nat44EiAddDelIdentityMapping) Unmarshal(b []byte) error {
 }
 
 // Nat44EiAddDelIdentityMappingReply defines message 'nat44_ei_add_del_identity_mapping_reply'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiAddDelIdentityMappingReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -277,6 +281,7 @@ func (m *Nat44EiAddDelIdentityMappingReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiAddDelInterfaceAddr defines message 'nat44_ei_add_del_interface_addr'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiAddDelInterfaceAddr struct {
 	IsAdd     bool                           `binapi:"bool,name=is_add" json:"is_add,omitempty"`
 	SwIfIndex interface_types.InterfaceIndex `binapi:"interface_index,name=sw_if_index" json:"sw_if_index,omitempty"`
@@ -318,6 +323,7 @@ func (m *Nat44EiAddDelInterfaceAddr) Unmarshal(b []byte) error {
 }
 
 // Nat44EiAddDelInterfaceAddrReply defines message 'nat44_ei_add_del_interface_addr_reply'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiAddDelInterfaceAddrReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -353,6 +359,7 @@ func (m *Nat44EiAddDelInterfaceAddrReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiAddDelStaticMapping defines message 'nat44_ei_add_del_static_mapping'.
+// InProgress: the message form may change in the future versions
 type Nat44EiAddDelStaticMapping struct {
 	IsAdd             bool                           `binapi:"bool,name=is_add" json:"is_add,omitempty"`
 	Flags             Nat44EiConfigFlags             `binapi:"nat44_ei_config_flags,name=flags" json:"flags,omitempty"`
@@ -422,6 +429,8 @@ func (m *Nat44EiAddDelStaticMapping) Unmarshal(b []byte) error {
 }
 
 // Nat44EiAddDelStaticMappingReply defines message 'nat44_ei_add_del_static_mapping_reply'.
+
+// InProgress: the message form may change in the future versions
 type Nat44EiAddDelStaticMappingReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -457,6 +466,7 @@ func (m *Nat44EiAddDelStaticMappingReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiAddressDetails defines message 'nat44_ei_address_details'.
+// InProgress: the message form may change in the future versions
 type Nat44EiAddressDetails struct {
 	IPAddress ip_types.IP4Address `binapi:"ip4_address,name=ip_address" json:"ip_address,omitempty"`
 	VrfID     uint32              `binapi:"u32,name=vrf_id" json:"vrf_id,omitempty"`
@@ -494,6 +504,7 @@ func (m *Nat44EiAddressDetails) Unmarshal(b []byte) error {
 }
 
 // Nat44EiAddressDump defines message 'nat44_ei_address_dump'.
+// InProgress: the message form may change in the future versions
 type Nat44EiAddressDump struct{}
 
 func (m *Nat44EiAddressDump) Reset()               { *m = Nat44EiAddressDump{} }
@@ -521,6 +532,7 @@ func (m *Nat44EiAddressDump) Unmarshal(b []byte) error {
 }
 
 // Nat44EiDelSession defines message 'nat44_ei_del_session'.
+// InProgress: the message form may change in the future versions
 type Nat44EiDelSession struct {
 	Address        ip_types.IP4Address `binapi:"ip4_address,name=address" json:"address,omitempty"`
 	Protocol       uint8               `binapi:"u8,name=protocol" json:"protocol,omitempty"`
@@ -578,6 +590,7 @@ func (m *Nat44EiDelSession) Unmarshal(b []byte) error {
 }
 
 // Nat44EiDelSessionReply defines message 'nat44_ei_del_session_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiDelSessionReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -611,6 +624,7 @@ func (m *Nat44EiDelSessionReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiDelUser defines message 'nat44_ei_del_user'.
+// InProgress: the message form may change in the future versions
 type Nat44EiDelUser struct {
 	IPAddress ip_types.IP4Address `binapi:"ip4_address,name=ip_address" json:"ip_address,omitempty"`
 	FibIndex  uint32              `binapi:"u32,name=fib_index" json:"fib_index,omitempty"`
@@ -648,6 +662,7 @@ func (m *Nat44EiDelUser) Unmarshal(b []byte) error {
 }
 
 // Nat44EiDelUserReply defines message 'nat44_ei_del_user_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiDelUserReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -681,6 +696,7 @@ func (m *Nat44EiDelUserReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiForwardingEnableDisable defines message 'nat44_ei_forwarding_enable_disable'.
+// InProgress: the message form may change in the future versions
 type Nat44EiForwardingEnableDisable struct {
 	Enable bool `binapi:"bool,name=enable" json:"enable,omitempty"`
 }
@@ -716,6 +732,7 @@ func (m *Nat44EiForwardingEnableDisable) Unmarshal(b []byte) error {
 }
 
 // Nat44EiForwardingEnableDisableReply defines message 'nat44_ei_forwarding_enable_disable_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiForwardingEnableDisableReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -751,6 +768,7 @@ func (m *Nat44EiForwardingEnableDisableReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiGetAddrAndPortAllocAlg defines message 'nat44_ei_get_addr_and_port_alloc_alg'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiGetAddrAndPortAllocAlg struct{}
 
 func (m *Nat44EiGetAddrAndPortAllocAlg) Reset() { *m = Nat44EiGetAddrAndPortAllocAlg{} }
@@ -780,6 +798,7 @@ func (m *Nat44EiGetAddrAndPortAllocAlg) Unmarshal(b []byte) error {
 }
 
 // Nat44EiGetAddrAndPortAllocAlgReply defines message 'nat44_ei_get_addr_and_port_alloc_alg_reply'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiGetAddrAndPortAllocAlgReply struct {
 	Retval     int32  `binapi:"i32,name=retval" json:"retval,omitempty"`
 	Alg        uint8  `binapi:"u8,name=alg" json:"alg,omitempty"`
@@ -839,6 +858,7 @@ func (m *Nat44EiGetAddrAndPortAllocAlgReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiGetMssClamping defines message 'nat44_ei_get_mss_clamping'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiGetMssClamping struct{}
 
 func (m *Nat44EiGetMssClamping) Reset()               { *m = Nat44EiGetMssClamping{} }
@@ -866,6 +886,7 @@ func (m *Nat44EiGetMssClamping) Unmarshal(b []byte) error {
 }
 
 // Nat44EiGetMssClampingReply defines message 'nat44_ei_get_mss_clamping_reply'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiGetMssClampingReply struct {
 	Retval   int32  `binapi:"i32,name=retval" json:"retval,omitempty"`
 	MssValue uint16 `binapi:"u16,name=mss_value" json:"mss_value,omitempty"`
@@ -907,6 +928,8 @@ func (m *Nat44EiGetMssClampingReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiHaFlush defines message 'nat44_ei_ha_flush'.
+
+// InProgress: the message form may change in the future versions
 type Nat44EiHaFlush struct{}
 
 func (m *Nat44EiHaFlush) Reset()               { *m = Nat44EiHaFlush{} }
@@ -934,6 +957,7 @@ func (m *Nat44EiHaFlush) Unmarshal(b []byte) error {
 }
 
 // Nat44EiHaFlushReply defines message 'nat44_ei_ha_flush_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiHaFlushReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -967,6 +991,7 @@ func (m *Nat44EiHaFlushReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiHaGetFailover defines message 'nat44_ei_ha_get_failover'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiHaGetFailover struct{}
 
 func (m *Nat44EiHaGetFailover) Reset()               { *m = Nat44EiHaGetFailover{} }
@@ -994,6 +1019,7 @@ func (m *Nat44EiHaGetFailover) Unmarshal(b []byte) error {
 }
 
 // Nat44EiHaGetFailoverReply defines message 'nat44_ei_ha_get_failover_reply'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiHaGetFailoverReply struct {
 	Retval                 int32               `binapi:"i32,name=retval" json:"retval,omitempty"`
 	IPAddress              ip_types.IP4Address `binapi:"ip4_address,name=ip_address" json:"ip_address,omitempty"`
@@ -1039,6 +1065,7 @@ func (m *Nat44EiHaGetFailoverReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiHaGetListener defines message 'nat44_ei_ha_get_listener'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiHaGetListener struct{}
 
 func (m *Nat44EiHaGetListener) Reset()               { *m = Nat44EiHaGetListener{} }
@@ -1066,6 +1093,7 @@ func (m *Nat44EiHaGetListener) Unmarshal(b []byte) error {
 }
 
 // Nat44EiHaGetListenerReply defines message 'nat44_ei_ha_get_listener_reply'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiHaGetListenerReply struct {
 	Retval    int32               `binapi:"i32,name=retval" json:"retval,omitempty"`
 	IPAddress ip_types.IP4Address `binapi:"ip4_address,name=ip_address" json:"ip_address,omitempty"`
@@ -1111,6 +1139,7 @@ func (m *Nat44EiHaGetListenerReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiHaResync defines message 'nat44_ei_ha_resync'.
+// InProgress: the message form may change in the future versions
 type Nat44EiHaResync struct {
 	WantResyncEvent uint8  `binapi:"u8,name=want_resync_event" json:"want_resync_event,omitempty"`
 	PID             uint32 `binapi:"u32,name=pid" json:"pid,omitempty"`
@@ -1148,6 +1177,7 @@ func (m *Nat44EiHaResync) Unmarshal(b []byte) error {
 }
 
 // Nat44EiHaResyncCompletedEvent defines message 'nat44_ei_ha_resync_completed_event'.
+// InProgress: the message form may change in the future versions
 type Nat44EiHaResyncCompletedEvent struct {
 	PID         uint32 `binapi:"u32,name=pid" json:"pid,omitempty"`
 	MissedCount uint32 `binapi:"u32,name=missed_count" json:"missed_count,omitempty"`
@@ -1187,6 +1217,7 @@ func (m *Nat44EiHaResyncCompletedEvent) Unmarshal(b []byte) error {
 }
 
 // Nat44EiHaResyncReply defines message 'nat44_ei_ha_resync_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiHaResyncReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -1220,6 +1251,7 @@ func (m *Nat44EiHaResyncReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiHaSetFailover defines message 'nat44_ei_ha_set_failover'.
+// InProgress: the message form may change in the future versions
 type Nat44EiHaSetFailover struct {
 	IPAddress              ip_types.IP4Address `binapi:"ip4_address,name=ip_address" json:"ip_address,omitempty"`
 	Port                   uint16              `binapi:"u16,name=port" json:"port,omitempty"`
@@ -1261,6 +1293,7 @@ func (m *Nat44EiHaSetFailover) Unmarshal(b []byte) error {
 }
 
 // Nat44EiHaSetFailoverReply defines message 'nat44_ei_ha_set_failover_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiHaSetFailoverReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -1294,6 +1327,7 @@ func (m *Nat44EiHaSetFailoverReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiHaSetListener defines message 'nat44_ei_ha_set_listener'.
+// InProgress: the message form may change in the future versions
 type Nat44EiHaSetListener struct {
 	IPAddress ip_types.IP4Address `binapi:"ip4_address,name=ip_address" json:"ip_address,omitempty"`
 	Port      uint16              `binapi:"u16,name=port" json:"port,omitempty"`
@@ -1335,6 +1369,7 @@ func (m *Nat44EiHaSetListener) Unmarshal(b []byte) error {
 }
 
 // Nat44EiHaSetListenerReply defines message 'nat44_ei_ha_set_listener_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiHaSetListenerReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -1368,6 +1403,7 @@ func (m *Nat44EiHaSetListenerReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiIdentityMappingDetails defines message 'nat44_ei_identity_mapping_details'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiIdentityMappingDetails struct {
 	Flags     Nat44EiConfigFlags             `binapi:"nat44_ei_config_flags,name=flags" json:"flags,omitempty"`
 	IPAddress ip_types.IP4Address            `binapi:"ip4_address,name=ip_address" json:"ip_address,omitempty"`
@@ -1427,6 +1463,7 @@ func (m *Nat44EiIdentityMappingDetails) Unmarshal(b []byte) error {
 }
 
 // Nat44EiIdentityMappingDump defines message 'nat44_ei_identity_mapping_dump'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiIdentityMappingDump struct{}
 
 func (m *Nat44EiIdentityMappingDump) Reset()               { *m = Nat44EiIdentityMappingDump{} }
@@ -1454,6 +1491,7 @@ func (m *Nat44EiIdentityMappingDump) Unmarshal(b []byte) error {
 }
 
 // Nat44EiInterfaceAddDelFeature defines message 'nat44_ei_interface_add_del_feature'.
+// InProgress: the message form may change in the future versions
 type Nat44EiInterfaceAddDelFeature struct {
 	IsAdd     bool                           `binapi:"bool,name=is_add" json:"is_add,omitempty"`
 	Flags     Nat44EiConfigFlags             `binapi:"nat44_ei_config_flags,name=flags" json:"flags,omitempty"`
@@ -1497,6 +1535,7 @@ func (m *Nat44EiInterfaceAddDelFeature) Unmarshal(b []byte) error {
 }
 
 // Nat44EiInterfaceAddDelFeatureReply defines message 'nat44_ei_interface_add_del_feature_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiInterfaceAddDelFeatureReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -1532,6 +1571,7 @@ func (m *Nat44EiInterfaceAddDelFeatureReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiInterfaceAddDelOutputFeature defines message 'nat44_ei_interface_add_del_output_feature'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiInterfaceAddDelOutputFeature struct {
 	IsAdd     bool                           `binapi:"bool,name=is_add" json:"is_add,omitempty"`
 	Flags     Nat44EiConfigFlags             `binapi:"nat44_ei_config_flags,name=flags" json:"flags,omitempty"`
@@ -1575,6 +1615,7 @@ func (m *Nat44EiInterfaceAddDelOutputFeature) Unmarshal(b []byte) error {
 }
 
 // Nat44EiInterfaceAddDelOutputFeatureReply defines message 'nat44_ei_interface_add_del_output_feature_reply'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiInterfaceAddDelOutputFeatureReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -1612,6 +1653,7 @@ func (m *Nat44EiInterfaceAddDelOutputFeatureReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiInterfaceAddrDetails defines message 'nat44_ei_interface_addr_details'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiInterfaceAddrDetails struct {
 	SwIfIndex interface_types.InterfaceIndex `binapi:"interface_index,name=sw_if_index" json:"sw_if_index,omitempty"`
 }
@@ -1645,6 +1687,7 @@ func (m *Nat44EiInterfaceAddrDetails) Unmarshal(b []byte) error {
 }
 
 // Nat44EiInterfaceAddrDump defines message 'nat44_ei_interface_addr_dump'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiInterfaceAddrDump struct{}
 
 func (m *Nat44EiInterfaceAddrDump) Reset()               { *m = Nat44EiInterfaceAddrDump{} }
@@ -1672,6 +1715,7 @@ func (m *Nat44EiInterfaceAddrDump) Unmarshal(b []byte) error {
 }
 
 // Nat44EiInterfaceDetails defines message 'nat44_ei_interface_details'.
+// InProgress: the message form may change in the future versions
 type Nat44EiInterfaceDetails struct {
 	Flags     Nat44EiConfigFlags             `binapi:"nat44_ei_config_flags,name=flags" json:"flags,omitempty"`
 	SwIfIndex interface_types.InterfaceIndex `binapi:"interface_index,name=sw_if_index" json:"sw_if_index,omitempty"`
@@ -1709,6 +1753,7 @@ func (m *Nat44EiInterfaceDetails) Unmarshal(b []byte) error {
 }
 
 // Nat44EiInterfaceDump defines message 'nat44_ei_interface_dump'.
+// InProgress: the message form may change in the future versions
 type Nat44EiInterfaceDump struct{}
 
 func (m *Nat44EiInterfaceDump) Reset()               { *m = Nat44EiInterfaceDump{} }
@@ -1736,6 +1781,7 @@ func (m *Nat44EiInterfaceDump) Unmarshal(b []byte) error {
 }
 
 // Nat44EiInterfaceOutputFeatureDetails defines message 'nat44_ei_interface_output_feature_details'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiInterfaceOutputFeatureDetails struct {
 	Flags     Nat44EiConfigFlags             `binapi:"nat44_ei_config_flags,name=flags" json:"flags,omitempty"`
 	SwIfIndex interface_types.InterfaceIndex `binapi:"interface_index,name=sw_if_index" json:"sw_if_index,omitempty"`
@@ -1775,6 +1821,7 @@ func (m *Nat44EiInterfaceOutputFeatureDetails) Unmarshal(b []byte) error {
 }
 
 // Nat44EiInterfaceOutputFeatureDump defines message 'nat44_ei_interface_output_feature_dump'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiInterfaceOutputFeatureDump struct{}
 
 func (m *Nat44EiInterfaceOutputFeatureDump) Reset() { *m = Nat44EiInterfaceOutputFeatureDump{} }
@@ -1804,6 +1851,7 @@ func (m *Nat44EiInterfaceOutputFeatureDump) Unmarshal(b []byte) error {
 }
 
 // Nat44EiIpfixEnableDisable defines message 'nat44_ei_ipfix_enable_disable'.
+// InProgress: the message form may change in the future versions
 type Nat44EiIpfixEnableDisable struct {
 	DomainID uint32 `binapi:"u32,name=domain_id" json:"domain_id,omitempty"`
 	SrcPort  uint16 `binapi:"u16,name=src_port" json:"src_port,omitempty"`
@@ -1845,6 +1893,7 @@ func (m *Nat44EiIpfixEnableDisable) Unmarshal(b []byte) error {
 }
 
 // Nat44EiIpfixEnableDisableReply defines message 'nat44_ei_ipfix_enable_disable_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiIpfixEnableDisableReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -1880,6 +1929,7 @@ func (m *Nat44EiIpfixEnableDisableReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiPluginEnableDisable defines message 'nat44_ei_plugin_enable_disable'.
+// InProgress: the message form may change in the future versions
 type Nat44EiPluginEnableDisable struct {
 	InsideVrf     uint32             `binapi:"u32,name=inside_vrf" json:"inside_vrf,omitempty"`
 	OutsideVrf    uint32             `binapi:"u32,name=outside_vrf" json:"outside_vrf,omitempty"`
@@ -1945,6 +1995,7 @@ func (m *Nat44EiPluginEnableDisable) Unmarshal(b []byte) error {
 }
 
 // Nat44EiPluginEnableDisableReply defines message 'nat44_ei_plugin_enable_disable_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiPluginEnableDisableReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -1980,6 +2031,7 @@ func (m *Nat44EiPluginEnableDisableReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiSetAddrAndPortAllocAlg defines message 'nat44_ei_set_addr_and_port_alloc_alg'.
+// InProgress: the message form may change in the future versions
 type Nat44EiSetAddrAndPortAllocAlg struct {
 	Alg        uint8  `binapi:"u8,name=alg" json:"alg,omitempty"`
 	PsidOffset uint8  `binapi:"u8,name=psid_offset" json:"psid_offset,omitempty"`
@@ -2035,6 +2087,7 @@ func (m *Nat44EiSetAddrAndPortAllocAlg) Unmarshal(b []byte) error {
 }
 
 // Nat44EiSetAddrAndPortAllocAlgReply defines message 'nat44_ei_set_addr_and_port_alloc_alg_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiSetAddrAndPortAllocAlgReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -2070,6 +2123,7 @@ func (m *Nat44EiSetAddrAndPortAllocAlgReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiSetFqOptions defines message 'nat44_ei_set_fq_options'.
+// InProgress: the message form may change in the future versions
 type Nat44EiSetFqOptions struct {
 	FrameQueueNelts uint32 `binapi:"u32,name=frame_queue_nelts" json:"frame_queue_nelts,omitempty"`
 }
@@ -2103,6 +2157,7 @@ func (m *Nat44EiSetFqOptions) Unmarshal(b []byte) error {
 }
 
 // Nat44EiSetFqOptionsReply defines message 'nat44_ei_set_fq_options_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiSetFqOptionsReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -2136,6 +2191,7 @@ func (m *Nat44EiSetFqOptionsReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiSetLogLevel defines message 'nat44_ei_set_log_level'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiSetLogLevel struct {
 	LogLevel nat_types.NatLogLevel `binapi:"nat_log_level,name=log_level" json:"log_level,omitempty"`
 }
@@ -2169,6 +2225,7 @@ func (m *Nat44EiSetLogLevel) Unmarshal(b []byte) error {
 }
 
 // Nat44EiSetLogLevelReply defines message 'nat44_ei_set_log_level_reply'.
+// Deprecated: the message will be removed in the future versions
 type Nat44EiSetLogLevelReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -2202,6 +2259,7 @@ func (m *Nat44EiSetLogLevelReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiSetMssClamping defines message 'nat44_ei_set_mss_clamping'.
+// InProgress: the message form may change in the future versions
 type Nat44EiSetMssClamping struct {
 	MssValue uint16 `binapi:"u16,name=mss_value" json:"mss_value,omitempty"`
 	Enable   bool   `binapi:"bool,name=enable" json:"enable,omitempty"`
@@ -2239,6 +2297,7 @@ func (m *Nat44EiSetMssClamping) Unmarshal(b []byte) error {
 }
 
 // Nat44EiSetMssClampingReply defines message 'nat44_ei_set_mss_clamping_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiSetMssClampingReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -2272,6 +2331,7 @@ func (m *Nat44EiSetMssClampingReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiSetTimeouts defines message 'nat44_ei_set_timeouts'.
+// InProgress: the message form may change in the future versions
 type Nat44EiSetTimeouts struct {
 	UDP            uint32 `binapi:"u32,name=udp" json:"udp,omitempty"`
 	TCPEstablished uint32 `binapi:"u32,name=tcp_established" json:"tcp_established,omitempty"`
@@ -2317,6 +2377,7 @@ func (m *Nat44EiSetTimeouts) Unmarshal(b []byte) error {
 }
 
 // Nat44EiSetTimeoutsReply defines message 'nat44_ei_set_timeouts_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiSetTimeoutsReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -2350,6 +2411,7 @@ func (m *Nat44EiSetTimeoutsReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiSetWorkers defines message 'nat44_ei_set_workers'.
+// InProgress: the message form may change in the future versions
 type Nat44EiSetWorkers struct {
 	WorkerMask uint64 `binapi:"u64,name=worker_mask" json:"worker_mask,omitempty"`
 }
@@ -2383,6 +2445,7 @@ func (m *Nat44EiSetWorkers) Unmarshal(b []byte) error {
 }
 
 // Nat44EiSetWorkersReply defines message 'nat44_ei_set_workers_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiSetWorkersReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -2416,6 +2479,7 @@ func (m *Nat44EiSetWorkersReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiShowFqOptions defines message 'nat44_ei_show_fq_options'.
+// InProgress: the message form may change in the future versions
 type Nat44EiShowFqOptions struct{}
 
 func (m *Nat44EiShowFqOptions) Reset()               { *m = Nat44EiShowFqOptions{} }
@@ -2443,6 +2507,7 @@ func (m *Nat44EiShowFqOptions) Unmarshal(b []byte) error {
 }
 
 // Nat44EiShowFqOptionsReply defines message 'nat44_ei_show_fq_options_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiShowFqOptionsReply struct {
 	Retval          int32  `binapi:"i32,name=retval" json:"retval,omitempty"`
 	FrameQueueNelts uint32 `binapi:"u32,name=frame_queue_nelts" json:"frame_queue_nelts,omitempty"`
@@ -2480,6 +2545,7 @@ func (m *Nat44EiShowFqOptionsReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiShowRunningConfig defines message 'nat44_ei_show_running_config'.
+// InProgress: the message form may change in the future versions
 type Nat44EiShowRunningConfig struct{}
 
 func (m *Nat44EiShowRunningConfig) Reset()               { *m = Nat44EiShowRunningConfig{} }
@@ -2507,6 +2573,7 @@ func (m *Nat44EiShowRunningConfig) Unmarshal(b []byte) error {
 }
 
 // Nat44EiShowRunningConfigReply defines message 'nat44_ei_show_running_config_reply'.
+// InProgress: the message form may change in the future versions
 type Nat44EiShowRunningConfigReply struct {
 	Retval              int32                 `binapi:"i32,name=retval" json:"retval,omitempty"`
 	InsideVrf           uint32                `binapi:"u32,name=inside_vrf" json:"inside_vrf,omitempty"`
@@ -2599,6 +2666,7 @@ func (m *Nat44EiShowRunningConfigReply) Unmarshal(b []byte) error {
 }
 
 // Nat44EiStaticMappingDetails defines message 'nat44_ei_static_mapping_details'.
+// InProgress: the message form may change in the future versions
 type Nat44EiStaticMappingDetails struct {
 	Flags             Nat44EiConfigFlags             `binapi:"nat44_ei_config_flags,name=flags" json:"flags,omitempty"`
 	LocalIPAddress    ip_types.IP4Address            `binapi:"ip4_address,name=local_ip_address" json:"local_ip_address,omitempty"`
@@ -2664,6 +2732,7 @@ func (m *Nat44EiStaticMappingDetails) Unmarshal(b []byte) error {
 }
 
 // Nat44EiStaticMappingDump defines message 'nat44_ei_static_mapping_dump'.
+// InProgress: the message form may change in the future versions
 type Nat44EiStaticMappingDump struct{}
 
 func (m *Nat44EiStaticMappingDump) Reset()               { *m = Nat44EiStaticMappingDump{} }
@@ -2691,6 +2760,7 @@ func (m *Nat44EiStaticMappingDump) Unmarshal(b []byte) error {
 }
 
 // Nat44EiUserDetails defines message 'nat44_ei_user_details'.
+// InProgress: the message form may change in the future versions
 type Nat44EiUserDetails struct {
 	VrfID           uint32              `binapi:"u32,name=vrf_id" json:"vrf_id,omitempty"`
 	IPAddress       ip_types.IP4Address `binapi:"ip4_address,name=ip_address" json:"ip_address,omitempty"`
@@ -2736,6 +2806,7 @@ func (m *Nat44EiUserDetails) Unmarshal(b []byte) error {
 }
 
 // Nat44EiUserDump defines message 'nat44_ei_user_dump'.
+<// InProgress: the message form may change in the future versions
 type Nat44EiUserDump struct{}
 
 func (m *Nat44EiUserDump) Reset()               { *m = Nat44EiUserDump{} }
@@ -2763,6 +2834,7 @@ func (m *Nat44EiUserDump) Unmarshal(b []byte) error {
 }
 
 // Nat44EiUserSessionDetails defines message 'nat44_ei_user_session_details'.
+// InProgress: the message form may change in the future versions
 type Nat44EiUserSessionDetails struct {
 	OutsideIPAddress ip_types.IP4Address `binapi:"ip4_address,name=outside_ip_address" json:"outside_ip_address,omitempty"`
 	OutsidePort      uint16              `binapi:"u16,name=outside_port" json:"outside_port,omitempty"`
@@ -2836,6 +2908,7 @@ func (m *Nat44EiUserSessionDetails) Unmarshal(b []byte) error {
 }
 
 // Nat44EiUserSessionDump defines message 'nat44_ei_user_session_dump'.
+// InProgress: the message form may change in the future versions
 type Nat44EiUserSessionDump struct {
 	IPAddress ip_types.IP4Address `binapi:"ip4_address,name=ip_address" json:"ip_address,omitempty"`
 	VrfID     uint32              `binapi:"u32,name=vrf_id" json:"vrf_id,omitempty"`
@@ -2873,6 +2946,7 @@ func (m *Nat44EiUserSessionDump) Unmarshal(b []byte) error {
 }
 
 // Nat44EiWorkerDetails defines message 'nat44_ei_worker_details'.
+// InProgress: the message form may change in the future versions
 type Nat44EiWorkerDetails struct {
 	WorkerIndex uint32 `binapi:"u32,name=worker_index" json:"worker_index,omitempty"`
 	LcoreID     uint32 `binapi:"u32,name=lcore_id" json:"lcore_id,omitempty"`
@@ -2914,6 +2988,7 @@ func (m *Nat44EiWorkerDetails) Unmarshal(b []byte) error {
 }
 
 // Nat44EiWorkerDump defines message 'nat44_ei_worker_dump'.
+// InProgress: the message form may change in the future versions
 type Nat44EiWorkerDump struct{}
 
 func (m *Nat44EiWorkerDump) Reset()               { *m = Nat44EiWorkerDump{} }

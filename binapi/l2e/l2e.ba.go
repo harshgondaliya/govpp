@@ -30,6 +30,7 @@ const (
 )
 
 // L2Emulation defines message 'l2_emulation'.
+// InProgress: the message form may change in the future versions
 type L2Emulation struct {
 	SwIfIndex interface_types.InterfaceIndex `binapi:"interface_index,name=sw_if_index" json:"sw_if_index,omitempty"`
 	Enable    bool                           `binapi:"bool,name=enable" json:"enable,omitempty"`
@@ -67,6 +68,7 @@ func (m *L2Emulation) Unmarshal(b []byte) error {
 }
 
 // L2EmulationReply defines message 'l2_emulation_reply'.
+// InProgress: the message form may change in the future versions
 type L2EmulationReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }

@@ -30,6 +30,7 @@ const (
 )
 
 // NsimConfigure defines message 'nsim_configure'.
+// Deprecated: the message will be removed in the future versions
 type NsimConfigure struct {
 	DelayInUsec              uint32 `binapi:"u32,name=delay_in_usec" json:"delay_in_usec,omitempty"`
 	AveragePacketSize        uint32 `binapi:"u32,name=average_packet_size" json:"average_packet_size,omitempty"`
@@ -157,6 +158,7 @@ func (m *NsimConfigure2Reply) Unmarshal(b []byte) error {
 }
 
 // NsimConfigureReply defines message 'nsim_configure_reply'.
+// Deprecated: the message will be removed in the future versions
 type NsimConfigureReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }

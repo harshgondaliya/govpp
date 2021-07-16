@@ -360,6 +360,7 @@ func (m *MapDomainDetails) Unmarshal(b []byte) error {
 }
 
 // MapDomainDump defines message 'map_domain_dump'.
+// Deprecated: the message will be removed in the future versions
 type MapDomainDump struct{}
 
 func (m *MapDomainDump) Reset()               { *m = MapDomainDump{} }

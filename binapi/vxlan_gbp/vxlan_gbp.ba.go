@@ -74,6 +74,7 @@ type VxlanGbpTunnel struct {
 }
 
 // SwInterfaceSetVxlanGbpBypass defines message 'sw_interface_set_vxlan_gbp_bypass'.
+// InProgress: the message form may change in the future versions
 type SwInterfaceSetVxlanGbpBypass struct {
 	SwIfIndex interface_types.InterfaceIndex `binapi:"interface_index,name=sw_if_index" json:"sw_if_index,omitempty"`
 	IsIPv6    bool                           `binapi:"bool,name=is_ipv6" json:"is_ipv6,omitempty"`
@@ -117,6 +118,7 @@ func (m *SwInterfaceSetVxlanGbpBypass) Unmarshal(b []byte) error {
 }
 
 // SwInterfaceSetVxlanGbpBypassReply defines message 'sw_interface_set_vxlan_gbp_bypass_reply'.
+// InProgress: the message form may change in the future versions
 type SwInterfaceSetVxlanGbpBypassReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
@@ -152,6 +154,7 @@ func (m *SwInterfaceSetVxlanGbpBypassReply) Unmarshal(b []byte) error {
 }
 
 // VxlanGbpTunnelAddDel defines message 'vxlan_gbp_tunnel_add_del'.
+// InProgress: the message form may change in the future versions
 type VxlanGbpTunnelAddDel struct {
 	IsAdd  bool           `binapi:"bool,name=is_add,default=true" json:"is_add,omitempty"`
 	Tunnel VxlanGbpTunnel `binapi:"vxlan_gbp_tunnel,name=tunnel" json:"tunnel,omitempty"`
@@ -216,6 +219,7 @@ func (m *VxlanGbpTunnelAddDel) Unmarshal(b []byte) error {
 }
 
 // VxlanGbpTunnelAddDelReply defines message 'vxlan_gbp_tunnel_add_del_reply'.
+// InProgress: the message form may change in the future versions
 type VxlanGbpTunnelAddDelReply struct {
 	Retval    int32                          `binapi:"i32,name=retval" json:"retval,omitempty"`
 	SwIfIndex interface_types.InterfaceIndex `binapi:"interface_index,name=sw_if_index" json:"sw_if_index,omitempty"`
@@ -253,6 +257,7 @@ func (m *VxlanGbpTunnelAddDelReply) Unmarshal(b []byte) error {
 }
 
 // VxlanGbpTunnelDetails defines message 'vxlan_gbp_tunnel_details'.
+// InProgress: the message form may change in the future versions
 type VxlanGbpTunnelDetails struct {
 	Tunnel VxlanGbpTunnel `binapi:"vxlan_gbp_tunnel,name=tunnel" json:"tunnel,omitempty"`
 }
@@ -313,6 +318,7 @@ func (m *VxlanGbpTunnelDetails) Unmarshal(b []byte) error {
 }
 
 // VxlanGbpTunnelDump defines message 'vxlan_gbp_tunnel_dump'.
+// InProgress: the message form may change in the future versions
 type VxlanGbpTunnelDump struct {
 	SwIfIndex interface_types.InterfaceIndex `binapi:"interface_index,name=sw_if_index,default=4294967295" json:"sw_if_index,omitempty"`
 }

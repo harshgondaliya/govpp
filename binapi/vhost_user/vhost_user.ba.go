@@ -32,6 +32,7 @@ const (
 )
 
 // CreateVhostUserIf defines message 'create_vhost_user_if'.
+// Deprecated: the message will be removed in the future versions
 type CreateVhostUserIf struct {
 	IsServer            bool                      `binapi:"bool,name=is_server" json:"is_server,omitempty"`
 	SockFilename        string                    `binapi:"string[256],name=sock_filename" json:"sock_filename,omitempty"`
@@ -105,6 +106,7 @@ func (m *CreateVhostUserIf) Unmarshal(b []byte) error {
 }
 
 // CreateVhostUserIfReply defines message 'create_vhost_user_if_reply'.
+// Deprecated: the message will be removed in the future versions
 type CreateVhostUserIfReply struct {
 	Retval    int32                          `binapi:"i32,name=retval" json:"retval,omitempty"`
 	SwIfIndex interface_types.InterfaceIndex `binapi:"interface_index,name=sw_if_index" json:"sw_if_index,omitempty"`
@@ -322,6 +324,7 @@ func (m *DeleteVhostUserIfReply) Unmarshal(b []byte) error {
 }
 
 // ModifyVhostUserIf defines message 'modify_vhost_user_if'.
+// Deprecated: the message will be removed in the future versions
 type ModifyVhostUserIf struct {
 	SwIfIndex         interface_types.InterfaceIndex `binapi:"interface_index,name=sw_if_index" json:"sw_if_index,omitempty"`
 	IsServer          bool                           `binapi:"bool,name=is_server" json:"is_server,omitempty"`
@@ -379,6 +382,7 @@ func (m *ModifyVhostUserIf) Unmarshal(b []byte) error {
 }
 
 // ModifyVhostUserIfReply defines message 'modify_vhost_user_if_reply'.
+// Deprecated: the message will be removed in the future versions
 type ModifyVhostUserIfReply struct {
 	Retval int32 `binapi:"i32,name=retval" json:"retval,omitempty"`
 }
