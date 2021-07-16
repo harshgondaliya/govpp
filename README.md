@@ -1,9 +1,9 @@
 [govpp](https://github.com/FDio/govpp/blob/master/README.md) is a go binding for the vpp api
 
-This repo provides the go binding for a version of vpp (currently vpp 20.09)
+This forked repo provides the go binding for a version of vpp (currently vpp 20.09)
 
 ```go
-import "github.com/edwarnicke/govpp/binapi"
+import "github.com/harshgondaliya/govpp/binapi"
 ```
 
 This repo also provides minimal docker containers for running vpp:
