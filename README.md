@@ -8,8 +8,8 @@ import "github.com/edwarnicke/govpp/binapi"
 
 This repo also provides minimal docker containers for running vpp:
 
-- [vpp](https://github.com/users/edwarnicke/packages/container/package/govpp%2Fvpp)
-- [vpp-dbg](https://github.com/users/edwarnicke/packages/container/package/govpp%2Fvpp) - debug image
+- [vpp](https://github.com/users/harshgondaliya/packages/container/package/govpp%2Fvpp)
+- [vpp-dbg](https://github.com/users/harshgondaliya/packages/container/package/govpp%2Fvpp) - debug image
 
 ## What to do if you need a different version of vpp:
 
